@@ -1,0 +1,6 @@
+CXX       = g++
+CXXFLAGS  = --std=gnu++17 -Wall -Wunused-variable -Wunused-function -g3 `sdl2-config --cflags`
+CXXSRCS   = $(notdir $(wildcard src/view/x86/*.cpp)) $(notdir $(wildcard src/factory/x86/*.cpp))
+LIBS      = -lpthread `sdl2-config --libs` -lSDL2_image
+VPATH     = src/view/x86:src/factory/x86:
+DFLAGS    = -Dx86
